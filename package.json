@@ -1,0 +1,32 @@
+{
+  "name": "documentify",
+  "version": "1.0.0",
+  "description": "A framework for document versioning in NoSql databases.",
+  "main": "./lib/documentify.js",
+  "scripts": {
+    "test": "mocha --require ./fix_tests.js --compilers coffee:coffee-script ./test/*.iced",
+    "prepublish": "rm -rf lib && mkdir lib && iced -b -c -o lib/ -I node src/*.iced"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arturoarevalo/documentify.git"
+  },
+  "keywords": [
+    "document",
+    "versioning",
+    "nosql"
+  ],
+  "author": "Arturo Arévalo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arturoarevalo/documentify/issues"
+  },
+  "homepage": "https://github.com/arturoarevalo/documentify#readme",
+  "devDependencies": {
+    "iced-coffee-script": "^108.0.9"
+  },
+  "dependencies": {
+    "jiff": "^0.7.3",
+    "schemify": "^1.1.0"
+  }
+}
